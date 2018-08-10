@@ -7,8 +7,6 @@
 #   model=bernoullimodel, output_format=:dataframe);
 
 function convert_a3d(sim, cnames, ::Val{:dataframe})
-  println(cnames)
   snames = [Symbol(cnames[i]) for i in 1: length(cnames)]
-  println(snames)
   [DataFrame(sim[:,:,i], snames) for i in 1:size(sim, 3)]
 end

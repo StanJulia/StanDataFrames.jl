@@ -34,8 +34,6 @@ cd(ProjDir) do
     CmdStanDir=CMDSTAN_HOME);
 
   if rc == 0
-    println(typeof(sim))
-    println(size(sim))
     display(sim[1])
   end
 
