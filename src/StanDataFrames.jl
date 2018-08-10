@@ -1,11 +1,11 @@
 module StanDataFrames
 
+import CmdStan: convert_a3d
+
 # package code goes here
-using Rexport, statistics, DataFrames
+using Reexport, Statistics, DataFrames, Documenter
 
 @reexport using CmdStan
-
-import CmdStan: convert_a3
 
 include("utilities/convert_a3d.jl")
 

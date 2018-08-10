@@ -6,8 +6,9 @@
 #   stanmodel = Stanmodel(num_samples=1200, thin=2, name="bernoulli", 
 #   model=bernoullimodel, output_format=:dataframe);
 
-using DataFrames
-
 function convert_a3d(sim, cnames, ::Val{:dataframe})
-  [DataFrame(sim[:,:,i], convert(Array{Symbol}, cnames)) for i in 1:size(sim, 3)]
+  println(cnames)
+  snames = [Symbol(cnames[i]) for i in 1: length(cnames)]
+  println(snames)
+  [DataFrame(sim[:,:,i], snames) for i in 1:size(sim, 3)]
 end
