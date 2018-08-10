@@ -1,0 +1,6 @@
+name = "StanDataFrames"
+uuid = "10a637b5-9662-5af7-ab66-944be901cf0c"
+authors = ["StanJulia <goedman@mac.com>"]
+version = "0.0.0"
+
+[deps]
