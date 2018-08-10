@@ -10,3 +10,5 @@
 # Introduction
 
 StanDataFrames generates a nchains DataFrames from the cmdstan generated sample files.
+
+Test case for convert_a3d federated approach.
