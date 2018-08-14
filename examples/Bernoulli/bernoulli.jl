@@ -1,4 +1,4 @@
-######### CmdStan program example  ###########
+######### StanDataFrames program example  ###########
 
 using StanDataFrames, Test, Statistics
 
