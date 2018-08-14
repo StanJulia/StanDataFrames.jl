@@ -5,9 +5,7 @@ using CmdStan: set_cmdstan_home!, CMDSTAN_HOME, Stanmodel,
   stan, Sample, Optimize, Diagnose, Variational
 
 # package code goes here
-using Reexport, Statistics, DataFrames, Documenter
-
-#@reexport using CmdStan
+using Statistics, DataFrames, Documenter
 
 include("utilities/convert_a3d.jl")
 
