@@ -4,7 +4,7 @@ authors = ["StanJulia <goedman@mac.com>"]
 version = "0.0.0"
 
 [deps]
-CmdStan = "b06cc8f0-5f5d-11e8-13db-4b9f44fd0782"
+CmdStan = "593b3428-ca2f-500c-ae53-031589ec8ddd"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
