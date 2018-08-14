@@ -4,6 +4,7 @@ authors = ["StanJulia <goedman@mac.com>"]
 version = "0.0.0"
 
 [deps]
+CmdStan = "593b3428-ca2f-500c-ae53-031589ec8ddd"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
