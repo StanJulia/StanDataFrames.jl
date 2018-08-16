@@ -33,7 +33,7 @@ cd(ProjDir) do
   rc, sim, cnames = stan(stanmodel, observeddata, ProjDir, diagnostics=false,
     CmdStanDir=CMDSTAN_HOME);
     
-  @test 0.1 <  sim[1][1, :theta]  < 0.5
+  @test 0.1 <  mean(sim[1][:, :theta]) < 0.5
 
   if rc == 0
     display(sim[1][:, [1, 2, 3, 8]])
