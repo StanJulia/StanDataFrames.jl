@@ -6,7 +6,8 @@ println("Running tests for StanDataFrames-j0.7-v0.0.0:\n")
 
 # Run execution_tests only if cmdstan is installed and CMDSTAN_HOME is set correctly.
 execution_tests = [
-  "test_bernoulli.jl"
+  "test_bernoulli.jl",
+  "test_bernoulli_nodf.jl"
 ]
 
 if CMDSTAN_HOME != ""

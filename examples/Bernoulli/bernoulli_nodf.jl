@@ -26,17 +26,13 @@ cd(ProjDir) do
     Dict("N" => 10, "y" => [0, 0, 0, 1, 0, 0, 0, 1, 0, 1])
   ]
 
-  global stanmodel, rc, dfa, cnames
+  global stanmodel, rc, sim, cnames
   stanmodel = Stanmodel(num_samples=1200, thin=2, name="bernoulli", 
-    model=bernoullimodel, output_format=:dataframe);
+    model=bernoullimodel);
 
-  rc, dfa, cnames = stan(stanmodel, observeddata, ProjDir, diagnostics=false,
+  rc, sim, cnames = stan(stanmodel, observeddata, ProjDir, diagnostics=false,
     CmdStanDir=CMDSTAN_HOME);
     
-  @test 0.1 <  mean(dfa[1][:, :theta]) < 0.5
-
-  if rc == 0
-    display(dfa[1][:, [1, 2, 3, 8]])
-  end
+  @test 0.1 <  mean(sim[:, 8, :]) < 0.5
 
 end # cd
