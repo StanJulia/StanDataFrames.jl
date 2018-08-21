@@ -1,5 +1,5 @@
 # Top level test script for Stan.jl
-using StanDataFrames, Test, Statistics
+using CmdStan, StanDataFrames, Test, Statistics
 
 println("Running tests for StanDataFrames-j0.7-v0.0.0:\n")
 

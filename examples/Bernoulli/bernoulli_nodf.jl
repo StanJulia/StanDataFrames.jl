@@ -1,6 +1,6 @@
 ######### StanDataFrames program example  ###########
 
-using StanDataFrames, Test, Statistics
+using CmdStan, StanDataFrames, Test, Statistics
 
 ProjDir = dirname(@__FILE__)
 cd(ProjDir) do
