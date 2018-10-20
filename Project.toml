@@ -1,5 +1,5 @@
 name = "StanDataFrames"
-uuid = "10a637b5-9662-5af7-ab66-944be901cf0c"
+uuid = "80e77ffc-c35e-544b-8e57-5accc6d0de25"
 authors = ["StanJulia <goedman@mac.com>"]
 version = "5.0.0"
 
