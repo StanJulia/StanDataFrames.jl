@@ -33,10 +33,10 @@ cd(ProjDir) do
   rc, dfa, cnames = stan(stanmodel, observeddata, ProjDir, diagnostics=false,
     CmdStanDir=CMDSTAN_HOME);
     
-  @test 0.1 <  mean(dfa[1][:, :theta]) < 0.5
+  @test 0.1 <  mean(dfa[1][:theta]) < 0.5
 
   if rc == 0
-    display(dfa[1][:, [1, 2, 3, 8]])
+    display(dfa[1][[1, 2, 3, 8]])
   end
 
 end # cd

@@ -37,6 +37,6 @@ cd(ProjDir) do
   
   dfa = convert_a3d(sim, cnames, Val(:dataframe))
   
-  @test 0.1 <  mean(dfa[1][:, :theta]) < 0.5
+  @test 0.1 <  mean(dfa[1][:theta]) < 0.5
   
 end # cd

@@ -11,7 +11,7 @@
 
 StanDataFrames generates a nchains DataFrames from the cmdstan generated sample files.
 
-As in [above example]:
+As in [above example](https://github.com/StanJulia/StanDataFrames.jl/blob/master/examples/Bernoulli/bernoulli.jl):
 
 ```
 ... (snipped)
@@ -26,5 +26,23 @@ As in [above example]:
 
 ```
 
-It is also possible to convert after thefact:
+It is also possible to convert after the fact:
+
+```
+... (snipped)
+
+  stanmodel = Stanmodel(num_samples=1200, thin=2, name="bernoulli", 
+    model=bernoullimodel);
+
+  rc, sim, cnames = stan(stanmodel, observeddata, ProjDir, diagnostics=false,
+    CmdStanDir=CMDSTAN_HOME);
+    
+  @test 0.1 <  mean(sim[:, 8, :]) < 0.5
+  
+  dfa = convert_a3d(sim, cnames, Val(:dataframe))
+
+... (snipped)
+
+```
+
 
