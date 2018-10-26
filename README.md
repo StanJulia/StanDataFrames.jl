@@ -11,4 +11,20 @@
 
 StanDataFrames generates a nchains DataFrames from the cmdstan generated sample files.
 
-Test case for convert_a3d federated approach.
+As in [above example]:
+
+```
+... (snipped)
+
+  stanmodel = Stanmodel(num_samples=1200, thin=2, name="bernoulli", 
+    model=bernoullimodel, output_format=:dataframe);
+
+  rc, dfa, cnames = stan(stanmodel, observeddata, ProjDir, diagnostics=false,
+    CmdStanDir=CMDSTAN_HOME);
+
+... (snipped)
+
+```
+
+It is also possible to convert after thefact:
+

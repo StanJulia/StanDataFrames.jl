@@ -1,7 +1,7 @@
 # Top level test script for Stan.jl
 using CmdStan, StanDataFrames, Test, Statistics
 
-println("Running tests for StanDataFrames-j1.0-v5.0.0:\n")
+println("\nRunning tests for StanDataFrames-j1.0-v4.0.1:\n")
 
 # Run execution_tests only if cmdstan is installed and CMDSTAN_HOME is set correctly.
 execution_tests = [

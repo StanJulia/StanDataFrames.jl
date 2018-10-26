@@ -34,5 +34,9 @@ cd(ProjDir) do
     CmdStanDir=CMDSTAN_HOME);
     
   @test 0.1 <  mean(sim[:, 8, :]) < 0.5
-
+  
+  dfa = convert_a3d(sim, cnames, Val(:dataframe))
+  
+  @test 0.1 <  mean(dfa[1][:, :theta]) < 0.5
+  
 end # cd
