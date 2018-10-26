@@ -26,6 +26,7 @@ As in [above example](https://github.com/StanJulia/StanDataFrames.jl/blob/master
 
 ```
 
+
 It is also possible to convert after the fact:
 
 ```
