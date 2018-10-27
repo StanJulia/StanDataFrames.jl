@@ -1,6 +1,6 @@
 module StanDataFrames
 
-using Statistics, DataFrames, Documenter
+using Statistics, DataFrames
 import CmdStan: convert_a3d
 
 # package code goes here
